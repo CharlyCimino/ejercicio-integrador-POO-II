@@ -1,0 +1,45 @@
+<diagram program="umletino" version="14.3.0"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>240</x><y>160</y><w>350</w><h>140</h></coordinates><panel_attributes>Fabrica
+--
+--
++Fabrica()
++agregarSucursal(Sucursal): void
++listarInstrumentos(): void
++instrumentosPorTipo(TipoInstrumento): ArrayList&lt;Instrumento&gt;
++borrarInstrumento(String): Instrumento
++porcInstrumentosPorTipo(String): double[]
+-buscarSucursal(String): Sucursal</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>690</x><y>130</y><w>350</w><h>190</h></coordinates><panel_attributes>Sucursal
+--
+- nombre: String
+--
++Sucursal(String)
++agregarInstrumento(Instrumento): void
++listarInstrumentos(): void
++instrumentosPorTipo(TipoInstrumento): ArrayList&lt;Instrumento&gt;
++borrarInstrumento(String): Instrumento
++porcInstrumentosPorTipo(): double[]
++getNombre(); String
+-buscarInstrumento(String): Instrumento
+-absolutoAPorcentaje(double[]): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>580</x><y>210</y><w>130</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+m1=*
+- sucursales</panel_attributes><additional_attributes>110;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>740</x><y>410</y><w>260</w><h>130</h></coordinates><panel_attributes>Instrumento
+--
+- ID: String
+- precio: double
+--
++Instrumento(String, double, TipoInstrumento)
++getID(): String
++getTipo(): TipoInstrumento
++toString(): String</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>860</x><y>310</y><w>100</w><h>120</h></coordinates><panel_attributes>lt=&lt;-
+m1=*
+- instrumentos</panel_attributes><additional_attributes>10;100;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>390</x><y>410</y><w>160</w><h>130</h></coordinates><panel_attributes>&lt;&lt;enum&gt;&gt;
+TipoInstrumento
+--
+_+ PERCUSION_
+_+ VIENTO_
+_+ CUERDA_
+--
+_+values(): TipoInstrumento[]_
++ordinal(): int
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>540</x><y>460</y><w>220</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+m1=1
+- tipo</panel_attributes><additional_attributes>10;20;200;20</additional_attributes></element></diagram>
