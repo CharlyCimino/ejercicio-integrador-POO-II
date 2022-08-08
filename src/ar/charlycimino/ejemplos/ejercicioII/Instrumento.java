@@ -1,4 +1,4 @@
-package fabricadeinstrumentos;
+package ar.charlycimino.ejemplos.ejercicioII;
 
 /**
  *
